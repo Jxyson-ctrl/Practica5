@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/sprites">
+        <file>jugador1.png</file>
+        <file>jugador2.png</file>
+    </qresource>
+</RCC>
