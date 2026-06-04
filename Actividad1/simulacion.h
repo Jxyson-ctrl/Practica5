@@ -5,6 +5,7 @@
 #include "obstaculo.h"
 #include <vector>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class Simulacion {
@@ -12,6 +13,7 @@ public:
     double anchoCaja;
     double altoCaja;
     double dt;
+    double tiempoActual;
     vector<Particula> particulas;
     vector<Obstaculo> obstaculos;
 
@@ -25,7 +27,7 @@ public:
 private:
     void colisionParedes(Particula& p);
     void colisionObstaculo(Particula& p, Obstaculo& o);
-    void colisionParticulas();
+    void colisionParticulas(ofstream& logColisiones);
     bool hayColisionObstaculo(Particula& p, Obstaculo& o);
     bool hayColisionParticula(Particula& a, Particula& b);
 };
